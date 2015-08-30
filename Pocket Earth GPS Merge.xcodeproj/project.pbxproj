@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2463B4331B937961005EEB83 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B4321B937961005EEB83 /* main.swift */; };
+		2463B43D1B937989005EEB83 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B43A1B937989005EEB83 /* CommandLine.swift */; };
+		2463B43E1B937989005EEB83 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B43B1B937989005EEB83 /* Option.swift */; };
+		2463B43F1B937989005EEB83 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B43C1B937989005EEB83 /* StringExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2463B42D1B937961005EEB83 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2463B42F1B937961005EEB83 /* gpsmerge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gpsmerge; sourceTree = BUILT_PRODUCTS_DIR; };
+		2463B4321B937961005EEB83 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2463B43A1B937989005EEB83 /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLine.swift; path = ../../../CommandLine/CommandLine/CommandLine.swift; sourceTree = "<group>"; };
+		2463B43B1B937989005EEB83 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = ../../../CommandLine/CommandLine/Option.swift; sourceTree = "<group>"; };
+		2463B43C1B937989005EEB83 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../../../CommandLine/CommandLine/StringExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2463B42C1B937961005EEB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2463B4261B937961005EEB83 = {
+			isa = PBXGroup;
+			children = (
+				2463B4311B937961005EEB83 /* Pocket Earth GPS Merge */,
+				2463B4301B937961005EEB83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2463B4301B937961005EEB83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2463B42F1B937961005EEB83 /* gpsmerge */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2463B4311B937961005EEB83 /* Pocket Earth GPS Merge */ = {
+			isa = PBXGroup;
+			children = (
+				2463B4391B93796E005EEB83 /* CommandLine */,
+				2463B4321B937961005EEB83 /* main.swift */,
+			);
+			path = "Pocket Earth GPS Merge";
+			sourceTree = "<group>";
+		};
+		2463B4391B93796E005EEB83 /* CommandLine */ = {
+			isa = PBXGroup;
+			children = (
+				2463B43A1B937989005EEB83 /* CommandLine.swift */,
+				2463B43B1B937989005EEB83 /* Option.swift */,
+				2463B43C1B937989005EEB83 /* StringExtensions.swift */,
+			);
+			name = CommandLine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2463B42E1B937961005EEB83 /* gpsmerge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpsmerge" */;
+			buildPhases = (
+				2463B42B1B937961005EEB83 /* Sources */,
+				2463B42C1B937961005EEB83 /* Frameworks */,
+				2463B42D1B937961005EEB83 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gpsmerge;
+			productName = "Pocket Earth GPS Merge";
+			productReference = 2463B42F1B937961005EEB83 /* gpsmerge */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2463B4271B937961005EEB83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Robert Carlsen";
+				TargetAttributes = {
+					2463B42E1B937961005EEB83 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 2463B42A1B937961005EEB83 /* Build configuration list for PBXProject "Pocket Earth GPS Merge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2463B4261B937961005EEB83;
+			productRefGroup = 2463B4301B937961005EEB83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2463B42E1B937961005EEB83 /* gpsmerge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2463B42B1B937961005EEB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2463B43D1B937989005EEB83 /* CommandLine.swift in Sources */,
+				2463B43E1B937989005EEB83 /* Option.swift in Sources */,
+				2463B43F1B937989005EEB83 /* StringExtensions.swift in Sources */,
+				2463B4331B937961005EEB83 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2463B4341B937961005EEB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2463B4351B937961005EEB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2463B4371B937961005EEB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2463B4381B937961005EEB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEPLOYMENT_LOCATION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2463B42A1B937961005EEB83 /* Build configuration list for PBXProject "Pocket Earth GPS Merge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2463B4341B937961005EEB83 /* Debug */,
+				2463B4351B937961005EEB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpsmerge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2463B4371B937961005EEB83 /* Debug */,
+				2463B4381B937961005EEB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2463B4271B937961005EEB83 /* Project object */;
+}
