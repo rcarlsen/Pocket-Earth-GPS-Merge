@@ -43,29 +43,31 @@ extension GPXDocumentMerge {
         return convertedPoints
     }
 
-    // mutates the passed in element
+    // returns a modified copy of the passed in element
     internal class func convertCommentToDescription(waypointElement: NSXMLElement, logLevel: LogLevel = .None) -> NSXMLElement {
         if logLevel >= .Debug {
             print("converting waypoint comment to description...")
         }
-        if let commentElement = waypointElement.elementsForName("cmt").first {
+        let waypoint: NSXMLElement = waypointElement.copy() as! NSXMLElement
+        if let commentElement = waypoint.elementsForName("cmt").first {
             commentElement.name = "desc"
         }
-        return waypointElement
+        return waypoint
     }
 
-    // mutates the track document
+    // returns a spliced copy of the track document
     internal class func spliceWaypoints(waypoints: [NSXMLNode], trackDoc: NSXMLDocument, logLevel: LogLevel = .None) -> NSXMLDocument {
         if logLevel >= .Info {
             print("splicing waypoints into track file...")
         }
-        if let root = trackDoc.rootElement() {
+        let trackDocCopy = trackDoc.copy() as! NSXMLDocument
+        if let root = trackDocCopy.rootElement() {
             root.insertChildren(waypoints, atIndex: (root.childCount > 0) ? root.childCount - 1 : 0)
         }
         if logLevel >= .Info {
             print("...finished!")
         }
-        return trackDoc
+        return trackDocCopy
     }
 
     var mergedDocument: NSXMLDocument? {
@@ -74,11 +76,10 @@ extension GPXDocumentMerge {
             if loggingLevel >= .Info {
                 print("modifying waypoint comments...")
             }
-            for waypoint in waypoints {
-                GPXDocumentMerge.convertCommentToDescription(waypoint, logLevel: loggingLevel)
-            }
-
-            return GPXDocumentMerge.spliceWaypoints(waypoints, trackDoc: trackDocument!, logLevel: loggingLevel)
+            let modifiedWaypoints = waypoints.map({ waypoint in
+                return GPXDocumentMerge.convertCommentToDescription(waypoint, logLevel: loggingLevel)
+            })
+            return GPXDocumentMerge.spliceWaypoints(modifiedWaypoints, trackDoc: trackDocument!, logLevel: loggingLevel)
         }
         return nil
     }
