@@ -38,7 +38,8 @@ do {
     if helpFlag.value {
         let description = "Merges GPX files from Ride With GPS for use with Pocket Earth.\n" +
         "Basic account with Ride With GPS does not export track and cuepoints together.\n" +
-        "Export the track and cuepoint route separately, then merge with this utility.\n\n"
+        "Export the track and cuepoint route separately, then merge with this utility.\n\n" +
+        "Version: \(Version.buildVersionString)\n\n"
         fputs(description, stderr)
         cli.printUsage()
     }

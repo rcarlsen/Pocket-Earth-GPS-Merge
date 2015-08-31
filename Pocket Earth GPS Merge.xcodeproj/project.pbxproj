@@ -19,6 +19,7 @@
 		24AA31241B94CD71002C1951 /* Central_Park_Lap.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 24AA31211B94CD71002C1951 /* Central_Park_Lap.gpx */; settings = {ASSET_TAGS = (); }; };
 		24AA31251B94CD71002C1951 /* Central_Park_Lap_Cues.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 24AA31221B94CD71002C1951 /* Central_Park_Lap_Cues.gpx */; settings = {ASSET_TAGS = (); }; };
 		24AA31261B94CD71002C1951 /* output.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 24AA31231B94CD71002C1951 /* output.gpx */; settings = {ASSET_TAGS = (); }; };
+		24AA312B1B94F08F002C1951 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA312A1B94F08F002C1951 /* Version.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		24AA31211B94CD71002C1951 /* Central_Park_Lap.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Central_Park_Lap.gpx; sourceTree = "<group>"; };
 		24AA31221B94CD71002C1951 /* Central_Park_Lap_Cues.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Central_Park_Lap_Cues.gpx; sourceTree = "<group>"; };
 		24AA31231B94CD71002C1951 /* output.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = output.gpx; sourceTree = "<group>"; };
+		24AA312A1B94F08F002C1951 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				24AA311A1B94CA79002C1951 /* LogLevel.swift */,
 				24AA310B1B94ADF7002C1951 /* GPXDocument.swift */,
 				2463B4321B937961005EEB83 /* main.swift */,
+				24AA312A1B94F08F002C1951 /* Version.swift */,
 			);
 			path = "Pocket Earth GPS Merge";
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpxmerge" */;
 			buildPhases = (
+				24AA31271B94E9BF002C1951 /* Set Bundle Build Version */,
 				2463B42B1B937961005EEB83 /* Sources */,
 				2463B42C1B937961005EEB83 /* Frameworks */,
 				2463B42D1B937961005EEB83 /* CopyFiles */,
@@ -211,11 +215,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24AA31271B94E9BF002C1951 /* Set Bundle Build Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Bundle Build Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${PROJECT_DIR}\"\nsh scripts/git-bundle-version.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2463B42B1B937961005EEB83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AA312B1B94F08F002C1951 /* Version.swift in Sources */,
 				249E86571B93D8380017461F /* StringExtensions.swift in Sources */,
 				24AA311B1B94CA79002C1951 /* LogLevel.swift in Sources */,
 				24AA310C1B94ADF7002C1951 /* GPXDocument.swift in Sources */,
@@ -382,6 +404,7 @@
 				24AA31171B94C99A002C1951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
