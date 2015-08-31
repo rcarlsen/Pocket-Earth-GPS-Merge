@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="http://ridewithgps.com/">
+  <metadata>
+    <name>Central Park Lap</name>
+    <link href="http://ridewithgps.com/routes/453515">
+      <text>Central Park Lap</text>
+    </link>
+    <time>2011-06-04T14:59:38Z</time>
+  </metadata>
+  <rte>
+    <name>Central Park Lap</name>
+    <rtept lat="40.76723" lon="-73.97667">
+      <name>Straight</name>
+      <cmt>Head east on Central Park-Center Dr toward Central Park Driveway </cmt>
+    </rtept>
+    <rtept lat="40.76725" lon="-73.97661">
+      <name>Straight</name>
+      <cmt>Continue onto Central Park Driveway </cmt>
+    </rtept>
+    <rtept lat="40.76954" lon="-73.97222">
+      <name>Straight</name>
+      <cmt>Continue onto East Dr</cmt>
+    </rtept>
+    <rtept lat="40.77309" lon="-73.96876">
+      <name>Left</name>
+      <cmt>Slight left onto Terrace Dr </cmt>
+    </rtept>
+    <rtept lat="40.77342" lon="-73.96912">
+      <name>Right</name>
+      <cmt>Slight right onto East Dr </cmt>
+    </rtept>
+    <rtept lat="40.79958" lon="-73.95784">
+      <name>Left</name>
+      <cmt>Turn left to stay on West Dr</cmt>
+    </rtept>
+    <rtept lat="40.79365" lon="-73.96112">
+      <name>Left</name>
+      <cmt>Slight left to stay on West Dr</cmt>
+    </rtept>
+    <rtept lat="40.77733" lon="-73.97415">
+      <name>Left</name>
+      <cmt>Slight left onto Central Park Driveway </cmt>
+    </rtept>
+    <rtept lat="40.77474" lon="-73.97456">
+      <name>Right</name>
+      <cmt>Slight right onto Terrace Dr </cmt>
+    </rtept>
+    <rtept lat="40.76723" lon="-73.97667">
+      <name>Generic</name>
+      <cmt>End of route</cmt>
+    </rtept>
+  </rte>
+</gpx>

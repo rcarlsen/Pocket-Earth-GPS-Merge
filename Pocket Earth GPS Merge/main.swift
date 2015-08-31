@@ -68,68 +68,35 @@ do {
 
 var loggingLevel = LogLevel(rawValue:verbosity.value) ?? LogLevel.None
 
-// do the processing and stuff.
-// let's try to brute force this the first time.
+let trackURL = NSURL(fileURLWithPath: trackFilePath.value ?? "")
+let routeURL = NSURL(fileURLWithPath: cuepointFilePath.value ?? "")
+
+if loggingLevel >= .Info {
+    print("gpx track file path:\t\(trackURL.absoluteString)")
+    print("gpx route file path:\t\(routeURL.absoluteString)")
+}
+
 do {
-    var waypointString: String?
-    var trackString: String?
-    
-    if let cuepointPath = cuepointFilePath.value {
-        if loggingLevel >= .Info {
-            print("reading cuepoint file:\t\t\(cuepointPath)")
-        }
-        let cuepointString = try String(contentsOfFile: cuepointPath)
-            .stringByReplacingOccurrencesOfString("<rtept", withString: "<wpt")
-            .stringByReplacingOccurrencesOfString("</rtept", withString:"</wpt")
-            .stringByReplacingOccurrencesOfString("<cmt", withString: "<desc")
-            .stringByReplacingOccurrencesOfString("</cmt", withString: "</desc")
-        
-        if loggingLevel >= .Debug {
-            print("replaced route points with waypoints...")
-        }
-        
-        let startIndex = cuepointString.rangeOfString("<wpt")?.startIndex
-        let endIndex = cuepointString.rangeOfString("</wpt>", options: NSStringCompareOptions.BackwardsSearch)?.endIndex
-        
-        if startIndex != nil && endIndex != nil {
-            waypointString = cuepointString.substringWithRange(Range(start: startIndex!, end: endIndex!))
-            if waypointString == nil {
-                throw NSError(domain: "net.robertcarlsen.gpxmerge", code: 100, userInfo: nil)
+    if let merge = GPXDocumentMerge(trackURL: trackURL, routeURL: routeURL) {
+        merge.loggingLevel = loggingLevel
+
+        // this does all the work:
+        if let mergedDoc = merge.mergedDocument {
+            let outputString = mergedDoc.XMLStringWithOptions(NSXMLNodePrettyPrint)
+
+            if let outputPath = outputFilePath.value {
+                try outputString.writeToFile(outputPath, atomically: false, encoding: NSUTF8StringEncoding)
+                if loggingLevel >= .Info {
+                    print("wrote merged GPX file:\t\(outputPath)")
+                }
             }
-            if loggingLevel >= .Debug {
-                print("found waypoints in transformed cuepoints file...")
+            else {
+                print(outputString)
             }
-        }
-    }
-    
-    if let trackPath = trackFilePath.value {
-        if loggingLevel >= .Info {
-            print("reading track file:\t\t\(trackPath)")
-        }
-        trackString = try String(contentsOfFile: trackPath)
-        let endIndex = trackString!.rangeOfString("</trk>", options:.BackwardsSearch)?.endIndex
-        if endIndex != nil {
-            trackString!.insertContentsOf("\n\t\(waypointString!)".characters, at: endIndex!)
-        }
-        if loggingLevel >= .Debug {
-            print("spliced waypoints into track file...")
-        }
-    }
-    
-    if let output = trackString {
-        if let outputPath = outputFilePath.value {
-            if loggingLevel >= .Info {
-                print("writing merged GPX file:\t\(outputPath)")
-            }
-            try output.writeToFile(outputPath, atomically: false, encoding: NSUTF8StringEncoding)
         }
         else {
-            print(output)
+            print("unable to merge the documents")
         }
-    }
-    
-    if loggingLevel >= .Info {
-        print("...finished!")
     }
 }
 catch {
