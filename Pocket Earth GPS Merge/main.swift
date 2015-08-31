@@ -9,13 +9,22 @@
 import Foundation
 import Cocoa
 
-//import CommandLine
+// operators for the log level enum:
+func < <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
+    return lhs.rawValue < rhs.rawValue
+}
+func <= <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
+    return lhs.rawValue <= rhs.rawValue
+}
+func > <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
+    return lhs.rawValue > rhs.rawValue
+}
+func >= <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
+    return lhs.rawValue >= rhs.rawValue
+}
 
 enum LogLevel: Int {
-    case None = 0
-    case Info
-    case Debug
-    case Error
+    case None, Info, Debug, Error
 }
 
 let cli = CommandLine()
@@ -66,7 +75,7 @@ do {
     var trackString: String?
     
     if let cuepointPath = cuepointFilePath.value {
-        if loggingLevel.rawValue >= LogLevel.Info.rawValue {
+        if loggingLevel >= .Info {
             print("reading cuepoint file:\t\t\(cuepointPath)")
         }
         let cuepointString = try String(contentsOfFile: cuepointPath)
@@ -75,7 +84,7 @@ do {
             .stringByReplacingOccurrencesOfString("<cmt", withString: "<desc")
             .stringByReplacingOccurrencesOfString("</cmt", withString: "</desc")
         
-        if loggingLevel.rawValue >= LogLevel.Debug.rawValue {
+        if loggingLevel >= .Debug {
             print("replaced route points with waypoints...")
         }
         
@@ -85,16 +94,16 @@ do {
         if startIndex != nil && endIndex != nil {
             waypointString = cuepointString.substringWithRange(Range(start: startIndex!, end: endIndex!))
             if waypointString == nil {
-                throw NSError(domain: "net.robertcarlsen.gpsmerge", code: 100, userInfo: nil)
+                throw NSError(domain: "net.robertcarlsen.gpxmerge", code: 100, userInfo: nil)
             }
-            if loggingLevel.rawValue >= LogLevel.Debug.rawValue {
+            if loggingLevel >= .Debug {
                 print("found waypoints in transformed cuepoints file...")
             }
         }
     }
     
     if let trackPath = trackFilePath.value {
-        if loggingLevel.rawValue >= LogLevel.Info.rawValue {
+        if loggingLevel >= .Info {
             print("reading track file:\t\t\(trackPath)")
         }
         trackString = try String(contentsOfFile: trackPath)
@@ -102,14 +111,14 @@ do {
         if endIndex != nil {
             trackString!.insertContentsOf("\n\t\(waypointString!)".characters, at: endIndex!)
         }
-        if loggingLevel.rawValue >= LogLevel.Debug.rawValue {
+        if loggingLevel >= .Debug {
             print("spliced waypoints into track file...")
         }
     }
     
     if let output = trackString {
         if let outputPath = outputFilePath.value {
-            if loggingLevel.rawValue >= LogLevel.Info.rawValue {
+            if loggingLevel >= .Info {
                 print("writing merged GPX file:\t\(outputPath)")
             }
             try output.writeToFile(outputPath, atomically: false, encoding: NSUTF8StringEncoding)
@@ -119,7 +128,7 @@ do {
         }
     }
     
-    if loggingLevel.rawValue >= LogLevel.Info.rawValue {
+    if loggingLevel >= .Info {
         print("...finished!")
     }
 }
