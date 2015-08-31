@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2463B4331B937961005EEB83 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B4321B937961005EEB83 /* main.swift */; };
-		2463B43D1B937989005EEB83 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B43A1B937989005EEB83 /* CommandLine.swift */; };
-		2463B43E1B937989005EEB83 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B43B1B937989005EEB83 /* Option.swift */; };
-		2463B43F1B937989005EEB83 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2463B43C1B937989005EEB83 /* StringExtensions.swift */; };
+		249E86551B93D8380017461F /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86521B93D8380017461F /* CommandLine.swift */; settings = {ASSET_TAGS = (); }; };
+		249E86561B93D8380017461F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86531B93D8380017461F /* Option.swift */; settings = {ASSET_TAGS = (); }; };
+		249E86571B93D8380017461F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86541B93D8380017461F /* StringExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +28,9 @@
 /* Begin PBXFileReference section */
 		2463B42F1B937961005EEB83 /* gpsmerge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gpsmerge; sourceTree = BUILT_PRODUCTS_DIR; };
 		2463B4321B937961005EEB83 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		2463B43A1B937989005EEB83 /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLine.swift; path = ../../../CommandLine/CommandLine/CommandLine.swift; sourceTree = "<group>"; };
-		2463B43B1B937989005EEB83 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = ../../../CommandLine/CommandLine/Option.swift; sourceTree = "<group>"; };
-		2463B43C1B937989005EEB83 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = ../../../CommandLine/CommandLine/StringExtensions.swift; sourceTree = "<group>"; };
+		249E86521B93D8380017461F /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLine.swift; path = Carthage/Checkouts/CommandLine/CommandLine/CommandLine.swift; sourceTree = SOURCE_ROOT; };
+		249E86531B93D8380017461F /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = Carthage/Checkouts/CommandLine/CommandLine/Option.swift; sourceTree = SOURCE_ROOT; };
+		249E86541B93D8380017461F /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Carthage/Checkouts/CommandLine/CommandLine/StringExtensions.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +72,9 @@
 		2463B4391B93796E005EEB83 /* CommandLine */ = {
 			isa = PBXGroup;
 			children = (
-				2463B43A1B937989005EEB83 /* CommandLine.swift */,
-				2463B43B1B937989005EEB83 /* Option.swift */,
-				2463B43C1B937989005EEB83 /* StringExtensions.swift */,
+				249E86521B93D8380017461F /* CommandLine.swift */,
+				249E86531B93D8380017461F /* Option.swift */,
+				249E86541B93D8380017461F /* StringExtensions.swift */,
 			);
 			name = CommandLine;
 			sourceTree = "<group>";
@@ -135,10 +135,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2463B43D1B937989005EEB83 /* CommandLine.swift in Sources */,
-				2463B43E1B937989005EEB83 /* Option.swift in Sources */,
-				2463B43F1B937989005EEB83 /* StringExtensions.swift in Sources */,
+				249E86571B93D8380017461F /* StringExtensions.swift in Sources */,
 				2463B4331B937961005EEB83 /* main.swift in Sources */,
+				249E86561B93D8380017461F /* Option.swift in Sources */,
+				249E86551B93D8380017461F /* CommandLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +258,7 @@
 				2463B4381B937961005EEB83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
