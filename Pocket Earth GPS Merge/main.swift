@@ -100,7 +100,7 @@ do {
         trackString = try String(contentsOfFile: trackPath)
         let endIndex = trackString!.rangeOfString("</trk>", options:.BackwardsSearch)?.endIndex
         if endIndex != nil {
-            trackString!.splice("\n\t\(waypointString!)".characters, atIndex: endIndex!)
+            trackString!.insertContentsOf("\n\t\(waypointString!)".characters, at: endIndex!)
         }
         if loggingLevel.rawValue >= LogLevel.Debug.rawValue {
             print("spliced waypoints into track file...")
