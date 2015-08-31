@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2463B42F1B937961005EEB83 /* gpsmerge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gpsmerge; sourceTree = BUILT_PRODUCTS_DIR; };
+		2463B42F1B937961005EEB83 /* gpxmerge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gpxmerge; sourceTree = BUILT_PRODUCTS_DIR; };
 		2463B4321B937961005EEB83 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		249E86521B93D8380017461F /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLine.swift; path = Carthage/Checkouts/CommandLine/CommandLine/CommandLine.swift; sourceTree = SOURCE_ROOT; };
 		249E86531B93D8380017461F /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = Carthage/Checkouts/CommandLine/CommandLine/Option.swift; sourceTree = SOURCE_ROOT; };
@@ -55,7 +55,7 @@
 		2463B4301B937961005EEB83 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2463B42F1B937961005EEB83 /* gpsmerge */,
+				2463B42F1B937961005EEB83 /* gpxmerge */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2463B42E1B937961005EEB83 /* gpsmerge */ = {
+		2463B42E1B937961005EEB83 /* gpxmerge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpsmerge" */;
+			buildConfigurationList = 2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpxmerge" */;
 			buildPhases = (
 				2463B42B1B937961005EEB83 /* Sources */,
 				2463B42C1B937961005EEB83 /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = gpsmerge;
+			name = gpxmerge;
 			productName = "Pocket Earth GPS Merge";
-			productReference = 2463B42F1B937961005EEB83 /* gpsmerge */;
+			productReference = 2463B42F1B937961005EEB83 /* gpxmerge */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2463B42E1B937961005EEB83 /* gpsmerge */,
+				2463B42E1B937961005EEB83 /* gpxmerge */,
 			);
 		};
 /* End PBXProject section */
@@ -251,7 +251,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpsmerge" */ = {
+		2463B4361B937961005EEB83 /* Build configuration list for PBXNativeTarget "gpxmerge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2463B4371B937961005EEB83 /* Debug */,
