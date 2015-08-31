@@ -12,6 +12,13 @@
 		249E86561B93D8380017461F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86531B93D8380017461F /* Option.swift */; settings = {ASSET_TAGS = (); }; };
 		249E86571B93D8380017461F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86541B93D8380017461F /* StringExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 		24AA310C1B94ADF7002C1951 /* GPXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA310B1B94ADF7002C1951 /* GPXDocument.swift */; settings = {ASSET_TAGS = (); }; };
+		24AA31141B94C99A002C1951 /* gpxmerge_tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA31131B94C99A002C1951 /* gpxmerge_tests.swift */; };
+		24AA311B1B94CA79002C1951 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA311A1B94CA79002C1951 /* LogLevel.swift */; settings = {ASSET_TAGS = (); }; };
+		24AA311C1B94CA79002C1951 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA311A1B94CA79002C1951 /* LogLevel.swift */; settings = {ASSET_TAGS = (); }; };
+		24AA311D1B94CA90002C1951 /* GPXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA310B1B94ADF7002C1951 /* GPXDocument.swift */; settings = {ASSET_TAGS = (); }; };
+		24AA31241B94CD71002C1951 /* Central_Park_Lap.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 24AA31211B94CD71002C1951 /* Central_Park_Lap.gpx */; settings = {ASSET_TAGS = (); }; };
+		24AA31251B94CD71002C1951 /* Central_Park_Lap_Cues.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 24AA31221B94CD71002C1951 /* Central_Park_Lap_Cues.gpx */; settings = {ASSET_TAGS = (); }; };
+		24AA31261B94CD71002C1951 /* output.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 24AA31231B94CD71002C1951 /* output.gpx */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,10 +40,24 @@
 		249E86531B93D8380017461F /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = Carthage/Checkouts/CommandLine/CommandLine/Option.swift; sourceTree = SOURCE_ROOT; };
 		249E86541B93D8380017461F /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Carthage/Checkouts/CommandLine/CommandLine/StringExtensions.swift; sourceTree = SOURCE_ROOT; };
 		24AA310B1B94ADF7002C1951 /* GPXDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXDocument.swift; sourceTree = "<group>"; };
+		24AA31111B94C99A002C1951 /* gpxmerge tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gpxmerge tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24AA31131B94C99A002C1951 /* gpxmerge_tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpxmerge_tests.swift; sourceTree = "<group>"; };
+		24AA31151B94C99A002C1951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24AA311A1B94CA79002C1951 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		24AA31211B94CD71002C1951 /* Central_Park_Lap.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Central_Park_Lap.gpx; sourceTree = "<group>"; };
+		24AA31221B94CD71002C1951 /* Central_Park_Lap_Cues.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Central_Park_Lap_Cues.gpx; sourceTree = "<group>"; };
+		24AA31231B94CD71002C1951 /* output.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = output.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2463B42C1B937961005EEB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24AA310E1B94C99A002C1951 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				2463B4311B937961005EEB83 /* Pocket Earth GPS Merge */,
+				24AA31121B94C99A002C1951 /* gpxmerge tests */,
 				2463B4301B937961005EEB83 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				2463B42F1B937961005EEB83 /* gpxmerge */,
+				24AA31111B94C99A002C1951 /* gpxmerge tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,8 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				2463B4391B93796E005EEB83 /* CommandLine */,
-				2463B4321B937961005EEB83 /* main.swift */,
+				24AA311A1B94CA79002C1951 /* LogLevel.swift */,
 				24AA310B1B94ADF7002C1951 /* GPXDocument.swift */,
+				2463B4321B937961005EEB83 /* main.swift */,
 			);
 			path = "Pocket Earth GPS Merge";
 			sourceTree = "<group>";
@@ -81,6 +105,26 @@
 			);
 			name = CommandLine;
 			sourceTree = "<group>";
+		};
+		24AA31121B94C99A002C1951 /* gpxmerge tests */ = {
+			isa = PBXGroup;
+			children = (
+				24AA31201B94CD71002C1951 /* sample */,
+				24AA31131B94C99A002C1951 /* gpxmerge_tests.swift */,
+				24AA31151B94C99A002C1951 /* Info.plist */,
+			);
+			path = "gpxmerge tests";
+			sourceTree = "<group>";
+		};
+		24AA31201B94CD71002C1951 /* sample */ = {
+			isa = PBXGroup;
+			children = (
+				24AA31211B94CD71002C1951 /* Central_Park_Lap.gpx */,
+				24AA31221B94CD71002C1951 /* Central_Park_Lap_Cues.gpx */,
+				24AA31231B94CD71002C1951 /* output.gpx */,
+			);
+			path = sample;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -102,6 +146,23 @@
 			productReference = 2463B42F1B937961005EEB83 /* gpxmerge */;
 			productType = "com.apple.product-type.tool";
 		};
+		24AA31101B94C99A002C1951 /* gpxmerge tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24AA31181B94C99A002C1951 /* Build configuration list for PBXNativeTarget "gpxmerge tests" */;
+			buildPhases = (
+				24AA310D1B94C99A002C1951 /* Sources */,
+				24AA310E1B94C99A002C1951 /* Frameworks */,
+				24AA310F1B94C99A002C1951 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gpxmerge tests";
+			productName = "gpxmerge tests";
+			productReference = 24AA31111B94C99A002C1951 /* gpxmerge tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -112,6 +173,9 @@
 				ORGANIZATIONNAME = "Robert Carlsen";
 				TargetAttributes = {
 					2463B42E1B937961005EEB83 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					24AA31101B94C99A002C1951 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -129,9 +193,23 @@
 			projectRoot = "";
 			targets = (
 				2463B42E1B937961005EEB83 /* gpxmerge */,
+				24AA31101B94C99A002C1951 /* gpxmerge tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24AA310F1B94C99A002C1951 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24AA31241B94CD71002C1951 /* Central_Park_Lap.gpx in Resources */,
+				24AA31251B94CD71002C1951 /* Central_Park_Lap_Cues.gpx in Resources */,
+				24AA31261B94CD71002C1951 /* output.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2463B42B1B937961005EEB83 /* Sources */ = {
@@ -139,10 +217,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				249E86571B93D8380017461F /* StringExtensions.swift in Sources */,
+				24AA311B1B94CA79002C1951 /* LogLevel.swift in Sources */,
 				24AA310C1B94ADF7002C1951 /* GPXDocument.swift in Sources */,
 				2463B4331B937961005EEB83 /* main.swift in Sources */,
 				249E86561B93D8380017461F /* Option.swift in Sources */,
 				249E86551B93D8380017461F /* CommandLine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24AA310D1B94C99A002C1951 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24AA31141B94C99A002C1951 /* gpxmerge_tests.swift in Sources */,
+				24AA311C1B94CA79002C1951 /* LogLevel.swift in Sources */,
+				24AA311D1B94CA90002C1951 /* GPXDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +332,28 @@
 			};
 			name = Release;
 		};
+		24AA31161B94C99A002C1951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "gpxmerge tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.robertcarlsen.gpxmerge-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		24AA31171B94C99A002C1951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "gpxmerge tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.robertcarlsen.gpxmerge-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -263,6 +374,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		24AA31181B94C99A002C1951 /* Build configuration list for PBXNativeTarget "gpxmerge tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24AA31161B94C99A002C1951 /* Debug */,
+				24AA31171B94C99A002C1951 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

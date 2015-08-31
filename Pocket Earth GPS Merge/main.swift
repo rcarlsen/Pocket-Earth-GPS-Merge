@@ -9,24 +9,6 @@
 import Foundation
 import Cocoa
 
-// operators for the log level enum:
-func < <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
-    return lhs.rawValue < rhs.rawValue
-}
-func <= <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
-    return lhs.rawValue <= rhs.rawValue
-}
-func > <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
-    return lhs.rawValue > rhs.rawValue
-}
-func >= <T: RawRepresentable where T.RawValue: Comparable>(lhs: T, rhs: T) -> Bool {
-    return lhs.rawValue >= rhs.rawValue
-}
-
-enum LogLevel: Int {
-    case None, Info, Debug, Error
-}
-
 let cli = CommandLine()
 
 let trackFilePath = StringOption(shortFlag: "t",

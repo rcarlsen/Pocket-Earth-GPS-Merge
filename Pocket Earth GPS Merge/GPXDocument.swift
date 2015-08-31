@@ -8,9 +8,9 @@
 
 import Foundation
 
-class GPXDocumentMerge {
-    var trackDocument: NSXMLDocument?
-    var routeDocument: NSXMLDocument?
+public class GPXDocumentMerge {
+    private(set) var trackDocument: NSXMLDocument?
+    private(set) var routeDocument: NSXMLDocument?
     var loggingLevel = LogLevel.None
 
     init?(trackURL track: NSURL, routeURL route: NSURL) {
@@ -20,15 +20,15 @@ class GPXDocumentMerge {
         }
         catch let error as NSError {
             print("unable to parse xml file: \(error.localizedDescription)")
+            return nil
         }
     }
 }
 
-
 extension GPXDocumentMerge {
     // returns a copy of the passed in elements
-    private func convertRoutePointsToWaypoints (routePoints: [NSXMLElement]) -> [NSXMLElement] {
-        if loggingLevel >= .Info {
+    internal class func convertRoutePointsToWaypoints(routePoints: [NSXMLElement], logLevel: LogLevel = .None) -> [NSXMLElement] {
+        if logLevel >= .Info {
             print("processing route points...")
         }
         var convertedPoints = [NSXMLElement]()
@@ -36,7 +36,7 @@ extension GPXDocumentMerge {
             let waypoint: NSXMLElement = routePoint.copy() as! NSXMLElement
             waypoint.name = "wpt"
             convertedPoints.append(waypoint)
-            if loggingLevel >= .Debug {
+            if logLevel >= .Debug {
                 print("converted route point to waypoint: \(waypoint.description)")
             }
         }
@@ -44,8 +44,8 @@ extension GPXDocumentMerge {
     }
 
     // mutates the passed in element
-    private func convertCommentsToDescription (waypointElement: NSXMLElement) -> NSXMLElement {
-        if loggingLevel >= .Debug {
+    internal class func convertCommentToDescription(waypointElement: NSXMLElement, logLevel: LogLevel = .None) -> NSXMLElement {
+        if logLevel >= .Debug {
             print("converting waypoint comment to description...")
         }
         if let commentElement = waypointElement.elementsForName("cmt").first {
@@ -55,14 +55,14 @@ extension GPXDocumentMerge {
     }
 
     // mutates the track document
-    private func spliceWaypoints (waypoints: [NSXMLNode], trackDoc: NSXMLDocument) -> NSXMLDocument {
-        if loggingLevel >= .Info {
+    internal class func spliceWaypoints(waypoints: [NSXMLNode], trackDoc: NSXMLDocument, logLevel: LogLevel = .None) -> NSXMLDocument {
+        if logLevel >= .Info {
             print("splicing waypoints into track file...")
         }
-        if let root = trackDocument?.rootElement() {
+        if let root = trackDoc.rootElement() {
             root.insertChildren(waypoints, atIndex: (root.childCount > 0) ? root.childCount - 1 : 0)
         }
-        if loggingLevel >= .Info {
+        if logLevel >= .Info {
             print("...finished!")
         }
         return trackDoc
@@ -70,15 +70,15 @@ extension GPXDocumentMerge {
 
     var mergedDocument: NSXMLDocument? {
         if let routePoints = routeDocument?.rootElement()?.elementsForName("rte").first?.elementsForName("rtept") {
-            let waypoints = convertRoutePointsToWaypoints(routePoints)
+            let waypoints = GPXDocumentMerge.convertRoutePointsToWaypoints(routePoints, logLevel:loggingLevel)
             if loggingLevel >= .Info {
                 print("modifying waypoint comments...")
             }
             for waypoint in waypoints {
-                convertCommentsToDescription(waypoint)
+                GPXDocumentMerge.convertCommentToDescription(waypoint, logLevel: loggingLevel)
             }
 
-            return spliceWaypoints(waypoints, trackDoc: trackDocument!)
+            return GPXDocumentMerge.spliceWaypoints(waypoints, trackDoc: trackDocument!, logLevel: loggingLevel)
         }
         return nil
     }
