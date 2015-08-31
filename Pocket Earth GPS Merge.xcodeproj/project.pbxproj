@@ -11,6 +11,7 @@
 		249E86551B93D8380017461F /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86521B93D8380017461F /* CommandLine.swift */; settings = {ASSET_TAGS = (); }; };
 		249E86561B93D8380017461F /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86531B93D8380017461F /* Option.swift */; settings = {ASSET_TAGS = (); }; };
 		249E86571B93D8380017461F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249E86541B93D8380017461F /* StringExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		24AA310C1B94ADF7002C1951 /* GPXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA310B1B94ADF7002C1951 /* GPXDocument.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		249E86521B93D8380017461F /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandLine.swift; path = Carthage/Checkouts/CommandLine/CommandLine/CommandLine.swift; sourceTree = SOURCE_ROOT; };
 		249E86531B93D8380017461F /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Option.swift; path = Carthage/Checkouts/CommandLine/CommandLine/Option.swift; sourceTree = SOURCE_ROOT; };
 		249E86541B93D8380017461F /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Carthage/Checkouts/CommandLine/CommandLine/StringExtensions.swift; sourceTree = SOURCE_ROOT; };
+		24AA310B1B94ADF7002C1951 /* GPXDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXDocument.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				2463B4391B93796E005EEB83 /* CommandLine */,
 				2463B4321B937961005EEB83 /* main.swift */,
+				24AA310B1B94ADF7002C1951 /* GPXDocument.swift */,
 			);
 			path = "Pocket Earth GPS Merge";
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				249E86571B93D8380017461F /* StringExtensions.swift in Sources */,
+				24AA310C1B94ADF7002C1951 /* GPXDocument.swift in Sources */,
 				2463B4331B937961005EEB83 /* main.swift in Sources */,
 				249E86561B93D8380017461F /* Option.swift in Sources */,
 				249E86551B93D8380017461F /* CommandLine.swift in Sources */,
